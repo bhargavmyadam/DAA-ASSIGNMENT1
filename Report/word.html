@@ -1,0 +1,1601 @@
+<!--docxjs library predefined styles--><style>
+.docx-wrapper { background: gray; padding: 30px; padding-bottom: 0px; display: flex; flex-flow: column; align-items: center; } 
+.docx-wrapper>section.docx { background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); margin-bottom: 30px; }
+.docx { color: black; }
+section.docx { box-sizing: border-box; display: flex; flex-flow: column nowrap; position: relative; overflow: hidden; }
+section.docx>article { margin-bottom: auto; }
+.docx table { border-collapse: collapse; }
+.docx table td, .docx table th { vertical-align: top; }
+.docx p { margin: 0pt; min-height: 1em; }
+.docx span { white-space: pre-wrap; overflow-wrap: break-word; }
+.docx a { color: inherit; text-decoration: inherit; }
+</style><!--docxjs document theme values--><style>.docx {
+  --docx-majorHAnsi-font: Calibri Light;
+  --docx-minorHAnsi-font: Calibri;
+  --docx-dk1-color: #000000;
+  --docx-lt1-color: #FFFFFF;
+  --docx-dk2-color: #44546A;
+  --docx-lt2-color: #E7E6E6;
+  --docx-accent1-color: #4472C4;
+  --docx-accent2-color: #ED7D31;
+  --docx-accent3-color: #A5A5A5;
+  --docx-accent4-color: #FFC000;
+  --docx-accent5-color: #5B9BD5;
+  --docx-accent6-color: #70AD47;
+  --docx-hlink-color: #0563C1;
+  --docx-folHlink-color: #954F72;
+}
+</style><!--docxjs document styles--><style>.docx span {
+  font-family: var(--docx-minorHAnsi-font);
+  min-height: 11.00pt;
+  font-size: 11.00pt;
+}
+.docx p {
+  margin-bottom: 8.00pt;
+  line-height: 1.08;
+}
+.docx table, table.docx_tablenormal td {
+  padding-top: 0.00pt;
+  padding-left: 5.40pt;
+  padding-bottom: 0.00pt;
+  padding-right: 5.40pt;
+}
+p.docx_listparagraph {
+  margin-left: 36.00pt;
+}
+p.docx_nospacing {
+  margin-bottom: 0.00pt;
+  line-height: 1.00;
+}
+</style><!--docxjs document numbering styles--><style>p.docx-num-1-0:before {
+  content: ""counter(docx-num-1-0, decimal)".\9";
+  counter-increment: docx-num-1-0;
+}
+p.docx-num-1-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-1-0 {
+  counter-reset: docx-num-1-1;
+}
+p.docx-num-1-1:before {
+  content: ""counter(docx-num-1-1, lower-alpha)".\9";
+  counter-increment: docx-num-1-1;
+}
+p.docx-num-1-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-1-1 {
+  counter-reset: docx-num-1-2;
+}
+p.docx-num-1-2:before {
+  content: ""counter(docx-num-1-2, lower-roman)".\9";
+  counter-increment: docx-num-1-2;
+}
+p.docx-num-1-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-1-2 {
+  counter-reset: docx-num-1-3;
+}
+p.docx-num-1-3:before {
+  content: ""counter(docx-num-1-3, decimal)".\9";
+  counter-increment: docx-num-1-3;
+}
+p.docx-num-1-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-1-3 {
+  counter-reset: docx-num-1-4;
+}
+p.docx-num-1-4:before {
+  content: ""counter(docx-num-1-4, lower-alpha)".\9";
+  counter-increment: docx-num-1-4;
+}
+p.docx-num-1-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-1-4 {
+  counter-reset: docx-num-1-5;
+}
+p.docx-num-1-5:before {
+  content: ""counter(docx-num-1-5, lower-roman)".\9";
+  counter-increment: docx-num-1-5;
+}
+p.docx-num-1-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-1-5 {
+  counter-reset: docx-num-1-6;
+}
+p.docx-num-1-6:before {
+  content: ""counter(docx-num-1-6, decimal)".\9";
+  counter-increment: docx-num-1-6;
+}
+p.docx-num-1-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-1-6 {
+  counter-reset: docx-num-1-7;
+}
+p.docx-num-1-7:before {
+  content: ""counter(docx-num-1-7, lower-alpha)".\9";
+  counter-increment: docx-num-1-7;
+}
+p.docx-num-1-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-1-7 {
+  counter-reset: docx-num-1-8;
+}
+p.docx-num-1-8:before {
+  content: ""counter(docx-num-1-8, lower-roman)".\9";
+  counter-increment: docx-num-1-8;
+}
+p.docx-num-1-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-7-0:before {
+  content: "\9";
+  counter-increment: docx-num-7-0;
+  font-family: Symbol;
+}
+p.docx-num-7-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 54.00pt;
+}
+p.docx-num-7-0 {
+  counter-reset: docx-num-7-1;
+}
+p.docx-num-7-1:before {
+  content: "o\9";
+  counter-increment: docx-num-7-1;
+  font-family: Courier New;
+}
+p.docx-num-7-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 90.00pt;
+}
+p.docx-num-7-1 {
+  counter-reset: docx-num-7-2;
+}
+p.docx-num-7-2:before {
+  content: "\9";
+  counter-increment: docx-num-7-2;
+  font-family: Wingdings;
+}
+p.docx-num-7-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 126.00pt;
+}
+p.docx-num-7-2 {
+  counter-reset: docx-num-7-3;
+}
+p.docx-num-7-3:before {
+  content: "\9";
+  counter-increment: docx-num-7-3;
+  font-family: Symbol;
+}
+p.docx-num-7-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 162.00pt;
+}
+p.docx-num-7-3 {
+  counter-reset: docx-num-7-4;
+}
+p.docx-num-7-4:before {
+  content: "o\9";
+  counter-increment: docx-num-7-4;
+  font-family: Courier New;
+}
+p.docx-num-7-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 198.00pt;
+}
+p.docx-num-7-4 {
+  counter-reset: docx-num-7-5;
+}
+p.docx-num-7-5:before {
+  content: "\9";
+  counter-increment: docx-num-7-5;
+  font-family: Wingdings;
+}
+p.docx-num-7-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 234.00pt;
+}
+p.docx-num-7-5 {
+  counter-reset: docx-num-7-6;
+}
+p.docx-num-7-6:before {
+  content: "\9";
+  counter-increment: docx-num-7-6;
+  font-family: Symbol;
+}
+p.docx-num-7-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 270.00pt;
+}
+p.docx-num-7-6 {
+  counter-reset: docx-num-7-7;
+}
+p.docx-num-7-7:before {
+  content: "o\9";
+  counter-increment: docx-num-7-7;
+  font-family: Courier New;
+}
+p.docx-num-7-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 306.00pt;
+}
+p.docx-num-7-7 {
+  counter-reset: docx-num-7-8;
+}
+p.docx-num-7-8:before {
+  content: "\9";
+  counter-increment: docx-num-7-8;
+  font-family: Wingdings;
+}
+p.docx-num-7-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 342.00pt;
+}
+p.docx-num-2-0:before {
+  content: ""counter(docx-num-2-0, lower-alpha)")\9";
+  counter-increment: docx-num-2-0;
+}
+p.docx-num-2-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-2-0 {
+  counter-reset: docx-num-2-1;
+}
+p.docx-num-2-1:before {
+  content: ""counter(docx-num-2-1, lower-alpha)".\9";
+  counter-increment: docx-num-2-1;
+}
+p.docx-num-2-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-2-1 {
+  counter-reset: docx-num-2-2;
+}
+p.docx-num-2-2:before {
+  content: ""counter(docx-num-2-2, lower-roman)".\9";
+  counter-increment: docx-num-2-2;
+}
+p.docx-num-2-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-2-2 {
+  counter-reset: docx-num-2-3;
+}
+p.docx-num-2-3:before {
+  content: ""counter(docx-num-2-3, decimal)".\9";
+  counter-increment: docx-num-2-3;
+}
+p.docx-num-2-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-2-3 {
+  counter-reset: docx-num-2-4;
+}
+p.docx-num-2-4:before {
+  content: ""counter(docx-num-2-4, lower-alpha)".\9";
+  counter-increment: docx-num-2-4;
+}
+p.docx-num-2-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-2-4 {
+  counter-reset: docx-num-2-5;
+}
+p.docx-num-2-5:before {
+  content: ""counter(docx-num-2-5, lower-roman)".\9";
+  counter-increment: docx-num-2-5;
+}
+p.docx-num-2-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-2-5 {
+  counter-reset: docx-num-2-6;
+}
+p.docx-num-2-6:before {
+  content: ""counter(docx-num-2-6, decimal)".\9";
+  counter-increment: docx-num-2-6;
+}
+p.docx-num-2-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-2-6 {
+  counter-reset: docx-num-2-7;
+}
+p.docx-num-2-7:before {
+  content: ""counter(docx-num-2-7, lower-alpha)".\9";
+  counter-increment: docx-num-2-7;
+}
+p.docx-num-2-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-2-7 {
+  counter-reset: docx-num-2-8;
+}
+p.docx-num-2-8:before {
+  content: ""counter(docx-num-2-8, lower-roman)".\9";
+  counter-increment: docx-num-2-8;
+}
+p.docx-num-2-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-9-0:before {
+  content: "\9";
+  counter-increment: docx-num-9-0;
+  font-family: Symbol;
+}
+p.docx-num-9-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-9-0 {
+  counter-reset: docx-num-9-1;
+}
+p.docx-num-9-1:before {
+  content: "o\9";
+  counter-increment: docx-num-9-1;
+  font-family: Courier New;
+}
+p.docx-num-9-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-9-1 {
+  counter-reset: docx-num-9-2;
+}
+p.docx-num-9-2:before {
+  content: "\9";
+  counter-increment: docx-num-9-2;
+  font-family: Wingdings;
+}
+p.docx-num-9-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-9-2 {
+  counter-reset: docx-num-9-3;
+}
+p.docx-num-9-3:before {
+  content: "\9";
+  counter-increment: docx-num-9-3;
+  font-family: Symbol;
+}
+p.docx-num-9-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-9-3 {
+  counter-reset: docx-num-9-4;
+}
+p.docx-num-9-4:before {
+  content: "o\9";
+  counter-increment: docx-num-9-4;
+  font-family: Courier New;
+}
+p.docx-num-9-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-9-4 {
+  counter-reset: docx-num-9-5;
+}
+p.docx-num-9-5:before {
+  content: "\9";
+  counter-increment: docx-num-9-5;
+  font-family: Wingdings;
+}
+p.docx-num-9-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-9-5 {
+  counter-reset: docx-num-9-6;
+}
+p.docx-num-9-6:before {
+  content: "\9";
+  counter-increment: docx-num-9-6;
+  font-family: Symbol;
+}
+p.docx-num-9-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-9-6 {
+  counter-reset: docx-num-9-7;
+}
+p.docx-num-9-7:before {
+  content: "o\9";
+  counter-increment: docx-num-9-7;
+  font-family: Courier New;
+}
+p.docx-num-9-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-9-7 {
+  counter-reset: docx-num-9-8;
+}
+p.docx-num-9-8:before {
+  content: "\9";
+  counter-increment: docx-num-9-8;
+  font-family: Wingdings;
+}
+p.docx-num-9-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-12-0:before {
+  content: ""counter(docx-num-12-0, decimal)".\9";
+  counter-increment: docx-num-12-0;
+}
+p.docx-num-12-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-12-0 {
+  counter-reset: docx-num-12-1;
+}
+p.docx-num-12-1:before {
+  content: ""counter(docx-num-12-1, lower-alpha)".\9";
+  counter-increment: docx-num-12-1;
+}
+p.docx-num-12-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-12-1 {
+  counter-reset: docx-num-12-2;
+}
+p.docx-num-12-2:before {
+  content: ""counter(docx-num-12-2, lower-roman)".\9";
+  counter-increment: docx-num-12-2;
+}
+p.docx-num-12-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-12-2 {
+  counter-reset: docx-num-12-3;
+}
+p.docx-num-12-3:before {
+  content: ""counter(docx-num-12-3, decimal)".\9";
+  counter-increment: docx-num-12-3;
+}
+p.docx-num-12-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-12-3 {
+  counter-reset: docx-num-12-4;
+}
+p.docx-num-12-4:before {
+  content: ""counter(docx-num-12-4, lower-alpha)".\9";
+  counter-increment: docx-num-12-4;
+}
+p.docx-num-12-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-12-4 {
+  counter-reset: docx-num-12-5;
+}
+p.docx-num-12-5:before {
+  content: ""counter(docx-num-12-5, lower-roman)".\9";
+  counter-increment: docx-num-12-5;
+}
+p.docx-num-12-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-12-5 {
+  counter-reset: docx-num-12-6;
+}
+p.docx-num-12-6:before {
+  content: ""counter(docx-num-12-6, decimal)".\9";
+  counter-increment: docx-num-12-6;
+}
+p.docx-num-12-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-12-6 {
+  counter-reset: docx-num-12-7;
+}
+p.docx-num-12-7:before {
+  content: ""counter(docx-num-12-7, lower-alpha)".\9";
+  counter-increment: docx-num-12-7;
+}
+p.docx-num-12-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-12-7 {
+  counter-reset: docx-num-12-8;
+}
+p.docx-num-12-8:before {
+  content: ""counter(docx-num-12-8, lower-roman)".\9";
+  counter-increment: docx-num-12-8;
+}
+p.docx-num-12-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-11-0:before {
+  content: "\9";
+  counter-increment: docx-num-11-0;
+  font-family: Symbol;
+}
+p.docx-num-11-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-11-0 {
+  counter-reset: docx-num-11-1;
+}
+p.docx-num-11-1:before {
+  content: "o\9";
+  counter-increment: docx-num-11-1;
+  font-family: Courier New;
+}
+p.docx-num-11-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-11-1 {
+  counter-reset: docx-num-11-2;
+}
+p.docx-num-11-2:before {
+  content: "\9";
+  counter-increment: docx-num-11-2;
+  font-family: Wingdings;
+}
+p.docx-num-11-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-11-2 {
+  counter-reset: docx-num-11-3;
+}
+p.docx-num-11-3:before {
+  content: "\9";
+  counter-increment: docx-num-11-3;
+  font-family: Symbol;
+}
+p.docx-num-11-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-11-3 {
+  counter-reset: docx-num-11-4;
+}
+p.docx-num-11-4:before {
+  content: "o\9";
+  counter-increment: docx-num-11-4;
+  font-family: Courier New;
+}
+p.docx-num-11-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-11-4 {
+  counter-reset: docx-num-11-5;
+}
+p.docx-num-11-5:before {
+  content: "\9";
+  counter-increment: docx-num-11-5;
+  font-family: Wingdings;
+}
+p.docx-num-11-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-11-5 {
+  counter-reset: docx-num-11-6;
+}
+p.docx-num-11-6:before {
+  content: "\9";
+  counter-increment: docx-num-11-6;
+  font-family: Symbol;
+}
+p.docx-num-11-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-11-6 {
+  counter-reset: docx-num-11-7;
+}
+p.docx-num-11-7:before {
+  content: "o\9";
+  counter-increment: docx-num-11-7;
+  font-family: Courier New;
+}
+p.docx-num-11-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-11-7 {
+  counter-reset: docx-num-11-8;
+}
+p.docx-num-11-8:before {
+  content: "\9";
+  counter-increment: docx-num-11-8;
+  font-family: Wingdings;
+}
+p.docx-num-11-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-6-0:before {
+  content: "\9";
+  counter-increment: docx-num-6-0;
+  font-family: Symbol;
+}
+p.docx-num-6-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 54.00pt;
+}
+p.docx-num-6-0 {
+  counter-reset: docx-num-6-1;
+}
+p.docx-num-6-1:before {
+  content: "o\9";
+  counter-increment: docx-num-6-1;
+  font-family: Courier New;
+}
+p.docx-num-6-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 90.00pt;
+}
+p.docx-num-6-1 {
+  counter-reset: docx-num-6-2;
+}
+p.docx-num-6-2:before {
+  content: "\9";
+  counter-increment: docx-num-6-2;
+  font-family: Wingdings;
+}
+p.docx-num-6-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 126.00pt;
+}
+p.docx-num-6-2 {
+  counter-reset: docx-num-6-3;
+}
+p.docx-num-6-3:before {
+  content: "\9";
+  counter-increment: docx-num-6-3;
+  font-family: Symbol;
+}
+p.docx-num-6-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 162.00pt;
+}
+p.docx-num-6-3 {
+  counter-reset: docx-num-6-4;
+}
+p.docx-num-6-4:before {
+  content: "o\9";
+  counter-increment: docx-num-6-4;
+  font-family: Courier New;
+}
+p.docx-num-6-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 198.00pt;
+}
+p.docx-num-6-4 {
+  counter-reset: docx-num-6-5;
+}
+p.docx-num-6-5:before {
+  content: "\9";
+  counter-increment: docx-num-6-5;
+  font-family: Wingdings;
+}
+p.docx-num-6-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 234.00pt;
+}
+p.docx-num-6-5 {
+  counter-reset: docx-num-6-6;
+}
+p.docx-num-6-6:before {
+  content: "\9";
+  counter-increment: docx-num-6-6;
+  font-family: Symbol;
+}
+p.docx-num-6-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 270.00pt;
+}
+p.docx-num-6-6 {
+  counter-reset: docx-num-6-7;
+}
+p.docx-num-6-7:before {
+  content: "o\9";
+  counter-increment: docx-num-6-7;
+  font-family: Courier New;
+}
+p.docx-num-6-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 306.00pt;
+}
+p.docx-num-6-7 {
+  counter-reset: docx-num-6-8;
+}
+p.docx-num-6-8:before {
+  content: "\9";
+  counter-increment: docx-num-6-8;
+  font-family: Wingdings;
+}
+p.docx-num-6-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 342.00pt;
+}
+p.docx-num-4-0:before {
+  content: "\9";
+  counter-increment: docx-num-4-0;
+  font-family: Wingdings;
+}
+p.docx-num-4-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-4-0 {
+  counter-reset: docx-num-4-1;
+}
+p.docx-num-4-1:before {
+  content: "o\9";
+  counter-increment: docx-num-4-1;
+  font-family: Courier New;
+}
+p.docx-num-4-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-4-1 {
+  counter-reset: docx-num-4-2;
+}
+p.docx-num-4-2:before {
+  content: "\9";
+  counter-increment: docx-num-4-2;
+  font-family: Wingdings;
+}
+p.docx-num-4-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-4-2 {
+  counter-reset: docx-num-4-3;
+}
+p.docx-num-4-3:before {
+  content: "\9";
+  counter-increment: docx-num-4-3;
+  font-family: Symbol;
+}
+p.docx-num-4-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-4-3 {
+  counter-reset: docx-num-4-4;
+}
+p.docx-num-4-4:before {
+  content: "o\9";
+  counter-increment: docx-num-4-4;
+  font-family: Courier New;
+}
+p.docx-num-4-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-4-4 {
+  counter-reset: docx-num-4-5;
+}
+p.docx-num-4-5:before {
+  content: "\9";
+  counter-increment: docx-num-4-5;
+  font-family: Wingdings;
+}
+p.docx-num-4-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-4-5 {
+  counter-reset: docx-num-4-6;
+}
+p.docx-num-4-6:before {
+  content: "\9";
+  counter-increment: docx-num-4-6;
+  font-family: Symbol;
+}
+p.docx-num-4-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-4-6 {
+  counter-reset: docx-num-4-7;
+}
+p.docx-num-4-7:before {
+  content: "o\9";
+  counter-increment: docx-num-4-7;
+  font-family: Courier New;
+}
+p.docx-num-4-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-4-7 {
+  counter-reset: docx-num-4-8;
+}
+p.docx-num-4-8:before {
+  content: "\9";
+  counter-increment: docx-num-4-8;
+  font-family: Wingdings;
+}
+p.docx-num-4-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-3-0:before {
+  content: ""counter(docx-num-3-0, lower-alpha)")\9";
+  counter-increment: docx-num-3-0;
+}
+p.docx-num-3-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-3-0 {
+  counter-reset: docx-num-3-1;
+}
+p.docx-num-3-1:before {
+  content: ""counter(docx-num-3-1, lower-alpha)".\9";
+  counter-increment: docx-num-3-1;
+}
+p.docx-num-3-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-3-1 {
+  counter-reset: docx-num-3-2;
+}
+p.docx-num-3-2:before {
+  content: ""counter(docx-num-3-2, lower-roman)".\9";
+  counter-increment: docx-num-3-2;
+}
+p.docx-num-3-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-3-2 {
+  counter-reset: docx-num-3-3;
+}
+p.docx-num-3-3:before {
+  content: ""counter(docx-num-3-3, decimal)".\9";
+  counter-increment: docx-num-3-3;
+}
+p.docx-num-3-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-3-3 {
+  counter-reset: docx-num-3-4;
+}
+p.docx-num-3-4:before {
+  content: ""counter(docx-num-3-4, lower-alpha)".\9";
+  counter-increment: docx-num-3-4;
+}
+p.docx-num-3-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-3-4 {
+  counter-reset: docx-num-3-5;
+}
+p.docx-num-3-5:before {
+  content: ""counter(docx-num-3-5, lower-roman)".\9";
+  counter-increment: docx-num-3-5;
+}
+p.docx-num-3-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-3-5 {
+  counter-reset: docx-num-3-6;
+}
+p.docx-num-3-6:before {
+  content: ""counter(docx-num-3-6, decimal)".\9";
+  counter-increment: docx-num-3-6;
+}
+p.docx-num-3-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-3-6 {
+  counter-reset: docx-num-3-7;
+}
+p.docx-num-3-7:before {
+  content: ""counter(docx-num-3-7, lower-alpha)".\9";
+  counter-increment: docx-num-3-7;
+}
+p.docx-num-3-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-3-7 {
+  counter-reset: docx-num-3-8;
+}
+p.docx-num-3-8:before {
+  content: ""counter(docx-num-3-8, lower-roman)".\9";
+  counter-increment: docx-num-3-8;
+}
+p.docx-num-3-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -9.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-5-0:before {
+  content: "\9";
+  counter-increment: docx-num-5-0;
+  font-family: Symbol;
+}
+p.docx-num-5-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-5-0 {
+  counter-reset: docx-num-5-1;
+}
+p.docx-num-5-1:before {
+  content: "o\9";
+  counter-increment: docx-num-5-1;
+  font-family: Courier New;
+}
+p.docx-num-5-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-5-1 {
+  counter-reset: docx-num-5-2;
+}
+p.docx-num-5-2:before {
+  content: "\9";
+  counter-increment: docx-num-5-2;
+  font-family: Wingdings;
+}
+p.docx-num-5-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-5-2 {
+  counter-reset: docx-num-5-3;
+}
+p.docx-num-5-3:before {
+  content: "\9";
+  counter-increment: docx-num-5-3;
+  font-family: Symbol;
+}
+p.docx-num-5-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-5-3 {
+  counter-reset: docx-num-5-4;
+}
+p.docx-num-5-4:before {
+  content: "o\9";
+  counter-increment: docx-num-5-4;
+  font-family: Courier New;
+}
+p.docx-num-5-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-5-4 {
+  counter-reset: docx-num-5-5;
+}
+p.docx-num-5-5:before {
+  content: "\9";
+  counter-increment: docx-num-5-5;
+  font-family: Wingdings;
+}
+p.docx-num-5-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-5-5 {
+  counter-reset: docx-num-5-6;
+}
+p.docx-num-5-6:before {
+  content: "\9";
+  counter-increment: docx-num-5-6;
+  font-family: Symbol;
+}
+p.docx-num-5-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-5-6 {
+  counter-reset: docx-num-5-7;
+}
+p.docx-num-5-7:before {
+  content: "o\9";
+  counter-increment: docx-num-5-7;
+  font-family: Courier New;
+}
+p.docx-num-5-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-5-7 {
+  counter-reset: docx-num-5-8;
+}
+p.docx-num-5-8:before {
+  content: "\9";
+  counter-increment: docx-num-5-8;
+  font-family: Wingdings;
+}
+p.docx-num-5-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 324.00pt;
+}
+p.docx-num-8-0:before {
+  content: "\9";
+  counter-increment: docx-num-8-0;
+  font-family: Symbol;
+}
+p.docx-num-8-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 54.00pt;
+}
+p.docx-num-8-0 {
+  counter-reset: docx-num-8-1;
+}
+p.docx-num-8-1:before {
+  content: "o\9";
+  counter-increment: docx-num-8-1;
+  font-family: Courier New;
+}
+p.docx-num-8-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 90.00pt;
+}
+p.docx-num-8-1 {
+  counter-reset: docx-num-8-2;
+}
+p.docx-num-8-2:before {
+  content: "\9";
+  counter-increment: docx-num-8-2;
+  font-family: Wingdings;
+}
+p.docx-num-8-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 126.00pt;
+}
+p.docx-num-8-2 {
+  counter-reset: docx-num-8-3;
+}
+p.docx-num-8-3:before {
+  content: "\9";
+  counter-increment: docx-num-8-3;
+  font-family: Symbol;
+}
+p.docx-num-8-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 162.00pt;
+}
+p.docx-num-8-3 {
+  counter-reset: docx-num-8-4;
+}
+p.docx-num-8-4:before {
+  content: "o\9";
+  counter-increment: docx-num-8-4;
+  font-family: Courier New;
+}
+p.docx-num-8-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 198.00pt;
+}
+p.docx-num-8-4 {
+  counter-reset: docx-num-8-5;
+}
+p.docx-num-8-5:before {
+  content: "\9";
+  counter-increment: docx-num-8-5;
+  font-family: Wingdings;
+}
+p.docx-num-8-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 234.00pt;
+}
+p.docx-num-8-5 {
+  counter-reset: docx-num-8-6;
+}
+p.docx-num-8-6:before {
+  content: "\9";
+  counter-increment: docx-num-8-6;
+  font-family: Symbol;
+}
+p.docx-num-8-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 270.00pt;
+}
+p.docx-num-8-6 {
+  counter-reset: docx-num-8-7;
+}
+p.docx-num-8-7:before {
+  content: "o\9";
+  counter-increment: docx-num-8-7;
+  font-family: Courier New;
+}
+p.docx-num-8-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 306.00pt;
+}
+p.docx-num-8-7 {
+  counter-reset: docx-num-8-8;
+}
+p.docx-num-8-8:before {
+  content: "\9";
+  counter-increment: docx-num-8-8;
+  font-family: Wingdings;
+}
+p.docx-num-8-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 342.00pt;
+}
+p.docx-num-10-0:before {
+  content: "\9";
+  counter-increment: docx-num-10-0;
+  font-family: Symbol;
+}
+p.docx-num-10-0 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 36.00pt;
+}
+p.docx-num-10-0 {
+  counter-reset: docx-num-10-1;
+}
+p.docx-num-10-1:before {
+  content: "o\9";
+  counter-increment: docx-num-10-1;
+  font-family: Courier New;
+}
+p.docx-num-10-1 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 72.00pt;
+}
+p.docx-num-10-1 {
+  counter-reset: docx-num-10-2;
+}
+p.docx-num-10-2:before {
+  content: "\9";
+  counter-increment: docx-num-10-2;
+  font-family: Wingdings;
+}
+p.docx-num-10-2 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 108.00pt;
+}
+p.docx-num-10-2 {
+  counter-reset: docx-num-10-3;
+}
+p.docx-num-10-3:before {
+  content: "\9";
+  counter-increment: docx-num-10-3;
+  font-family: Symbol;
+}
+p.docx-num-10-3 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 144.00pt;
+}
+p.docx-num-10-3 {
+  counter-reset: docx-num-10-4;
+}
+p.docx-num-10-4:before {
+  content: "o\9";
+  counter-increment: docx-num-10-4;
+  font-family: Courier New;
+}
+p.docx-num-10-4 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 180.00pt;
+}
+p.docx-num-10-4 {
+  counter-reset: docx-num-10-5;
+}
+p.docx-num-10-5:before {
+  content: "\9";
+  counter-increment: docx-num-10-5;
+  font-family: Wingdings;
+}
+p.docx-num-10-5 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 216.00pt;
+}
+p.docx-num-10-5 {
+  counter-reset: docx-num-10-6;
+}
+p.docx-num-10-6:before {
+  content: "\9";
+  counter-increment: docx-num-10-6;
+  font-family: Symbol;
+}
+p.docx-num-10-6 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 252.00pt;
+}
+p.docx-num-10-6 {
+  counter-reset: docx-num-10-7;
+}
+p.docx-num-10-7:before {
+  content: "o\9";
+  counter-increment: docx-num-10-7;
+  font-family: Courier New;
+}
+p.docx-num-10-7 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 288.00pt;
+}
+p.docx-num-10-7 {
+  counter-reset: docx-num-10-8;
+}
+p.docx-num-10-8:before {
+  content: "\9";
+  counter-increment: docx-num-10-8;
+  font-family: Wingdings;
+}
+p.docx-num-10-8 {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: none;
+  text-indent: -18.00pt;
+  margin-left: 324.00pt;
+}
+.docx-wrapper {
+  counter-reset: docx-num-1-0 docx-num-7-0 docx-num-2-0 docx-num-9-0 docx-num-12-0 docx-num-11-0 docx-num-6-0 docx-num-4-0 docx-num-3-0 docx-num-5-0 docx-num-8-0 docx-num-10-0;
+}
+</style><div class="docx-wrapper"><section class="docx" style="padding: 72pt; width: 595.3pt; min-height: 841.9pt;"><article><p class="docx_nospacing" style="text-align: center;"><span style="font-weight: bold; min-height: 18pt; font-size: 18pt;">   A Project Report</span></p><p class="docx_nospacing" style="text-align: center;"></p><p class="docx_nospacing" style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">  </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">On</span></p><p class="docx_nospacing" style="text-align: center;"></p><p class="docx_nospacing" style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">Algorithm for the </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">D</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">ecomposition of a </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">P</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">olygon into </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">C</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">onvex</span></p><p class="docx_nospacing" style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">P</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">olygons</span></p><p style="margin-bottom: 11.05pt;"></p><p style="margin-bottom: 11.05pt;"><span style="font-family: Calibri;">                  </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">Tumu Akshar</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span>   </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"><span class="docx-tab-stop"> </span> 2020A7PS0003H </span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: -74.2pt;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                        </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">D.V.</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">Sasanka</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                                                               2020A7PS0005H</span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: -74.2pt;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                        </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">M.</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">Bhargav</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                                                                  2020A7PS0025H</span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: -74.2pt;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                        </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">P</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">V Rohith</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                                                                   </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">2020A7PS0100H</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">   </span></p><p style="margin-bottom: 10.9pt; text-indent: -0.5pt; margin-left: 0.6pt; margin-right: 0.15pt; text-align: center;"></p><p style="margin-bottom: 10.9pt; text-indent: -0.5pt; margin-left: 0.6pt; margin-right: 0.15pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; min-height: 14pt; font-size: 14pt;">Under the supervision of </span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: 0.5pt; margin-right: 0.05pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">FACULTY: Dr. </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;">Tathagata Ray</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 15pt; font-size: 15pt;"> </span></p><p style="margin-bottom: 10.9pt; margin-left: 2.9pt; text-align: center;"></p><p style="margin-bottom: 10.9pt; margin-left: 2.9pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> </span></p><p style="margin-bottom: 10.8pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">SUBMITTED AS AN EVALUATION COMPONENT OF</span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: 0.5pt; margin-right: 0.45pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">Course: </span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">Design and Analysis of Algorithms</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> - CS F</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">364</span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;"> </span></p><p style="margin-bottom: 10.8pt; text-indent: -0.5pt; margin-left: 0.5pt; margin-right: 0.45pt; text-align: center;"></p><p style="margin-bottom: 8.3pt; margin-left: 2.55pt; text-align: center;"><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 63.55pt; height: 63.55pt;"><img src="Picture0.jpg" style="position: relative; left: 0pt; top: 0pt; width: 63.55pt; height: 63.55pt;"></div></span><span style="font-family: &quot;Times New Roman&quot;; min-height: 12pt; font-size: 12pt;"> </span></p><p style="margin-bottom: 10.65pt; margin-left: 2.9pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; min-height: 12pt; font-size: 12pt;"> </span></p><p style="margin-bottom: 11.05pt; text-indent: -0.5pt; margin-left: 0.5pt; margin-right: 24.95pt; text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">              BIRLA INSTITUTE OF TECHNOLOGY AND SCIENCE PILANI</span></p><p><span><span class="docx-tab-stop"> </span></span><span style="font-family: &quot;Times New Roman&quot;; font-weight: bold; min-height: 12pt; font-size: 12pt;">                                            HYDERABAD CAMPUS</span></p><p></p><p></p><p class="docx_listparagraph docx-num-12-0"><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;">ABSTRACT</span><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;"><br></span></p><p style="margin-left: 18pt;"><span style="min-height: 12pt; font-size: 12pt;">Decomposing </span><span style="min-height: 12pt; font-size: 12pt;">an arbitrary polygon into smaller convex polygons</span><span style="min-height: 12pt; font-size: 12pt;"> holds a lot of value in literature due to its applications in various domains such as </span><span style="min-height: 12pt; font-size: 12pt;">computer graphics, geographical information systems, </span><span style="min-height: 12pt; font-size: 12pt;">robotics etc. </span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">This project focuses on developing a model to achieve the above task </span><span style="min-height: 12pt; font-size: 12pt;">by implementing an algorithm that doesn’t add additional vertices to the polygon. </span><span style="min-height: 12pt; font-size: 12pt;">Th</span><span style="min-height: 12pt; font-size: 12pt;">is divide and conquer </span><span style="min-height: 12pt; font-size: 12pt;">approach-based</span><span style="min-height: 12pt; font-size: 12pt;"> algorithm adds </span><span style="min-height: 12pt; font-size: 12pt;">required</span><span style="min-height: 12pt; font-size: 12pt;"> edges </span><span style="min-height: 12pt; font-size: 12pt;">between vertices not connected to each other to </span><span style="min-height: 12pt; font-size: 12pt;">remove the presence of internal reflex angles and </span><span style="min-height: 12pt; font-size: 12pt;">partition the polygon into convex polygons. </span><span style="min-height: 12pt; font-size: 12pt;">We also implement a merging heuristic algorithm that </span><span style="min-height: 12pt; font-size: 12pt;">identifies </span><span style="min-height: 12pt; font-size: 12pt;">some inessential edges added by the algorithm and removes them to generate a more optimal partition.</span><span style="min-height: 12pt; font-size: 12pt;"> We implemented the Doubly Connected Edge List (DCEL) data structure to store the polygon decomposition related information.</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">We experimented the developed algorithm on instances of varying complexity and performed a timing analysis to observe the performance of the algorithm on such instances.</span></p><p></p><p class="docx_listparagraph docx-num-12-0"><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;">EXPERIMENTS AND TIMING ANALYSI</span><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;">S</span><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;"><br></span></p><p><span style="min-height: 12pt; font-size: 12pt;">Wide range of experiments were performed in this analysis, </span><span style="min-height: 12pt; font-size: 12pt;">with the number of vertices of polygons considered ranging from 5 to 10,000. </span></p><p class="docx_listparagraph docx-num-1-0"><span style="min-height: 12pt; font-size: 12pt;">Figure 1 shows a polygon consists of 7 vertices and one internal reflex angle, thus making it a non-convex polygon.</span><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p style="text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 306.34pt; height: 229.2pt;"><img src="Picture1.png" style="position: relative; left: 0pt; top: 0pt; width: 307.57pt; height: 230.12pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 1</span></p><p style="text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 317.4pt; height: 237.91pt;"><img src="Picture2.png" style="position: relative; left: 0pt; top: 0pt; width: 318.3pt; height: 238.58pt;"></div></span><span><br></span><span style="font-weight: bold;">Figure 2</span></p><p style="text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 312.6pt; height: 236.72pt;"><img src="Picture3.png" style="position: relative; left: 0pt; top: 0pt; width: 314.62pt; height: 238.24pt;"></div></span><span><br></span><span style="font-weight: bold;">Figure 3</span><span><br></span></p><p class="docx_listparagraph docx-num-5-0"><span style="min-height: 12pt; font-size: 12pt;">Figure 2 shows the decomposition of the above non-convex polygon into multiple convex polygons by implementing the decomposition algorithm. </span><span style="min-height: 12pt; font-size: 12pt;">As we can observe, no new vertices have been added and 3 new edges have been added </span><span style="min-height: 12pt; font-size: 12pt;">to decompose the polygon into 4 convex polygons. </span><span style="min-height: 12pt; font-size: 12pt;">However, one of the diagonals is not essential and removing it gives a more optimal decomposition as seen by Figure 2, which is the output of the applying merging algorithm on Figure 2</span><span style="min-height: 12pt; font-size: 12pt;">. The final decomposition consists of 2 additonal edges and 3 convex polygons.</span></p><p class="docx_listparagraph docx-num-5-0"><span style="min-height: 12pt; font-size: 12pt;">The time required to implement the algorithm for this polygon is approximately 0 seconds.</span></p><p></p><p></p><p class="docx_listparagraph docx-num-1-0"><span style="min-height: 12pt; font-size: 12pt;">To experiment the algorithm on convex polygons, </span><span style="min-height: 12pt; font-size: 12pt;">the outlines of various countries of the world were considered. </span><span style="min-height: 12pt; font-size: 12pt;">We applied the de</span><span style="min-height: 12pt; font-size: 12pt;">c</span><span style="min-height: 12pt; font-size: 12pt;">omposition </span><span style="min-height: 12pt; font-size: 12pt;">and merging process on</span><span style="min-height: 12pt; font-size: 12pt;"> 180 different countries </span><span style="min-height: 12pt; font-size: 12pt;">of the world</span><span style="min-height: 12pt; font-size: 12pt;">, with number of vertices ranging from 20 to </span><span style="min-height: 12pt; font-size: 12pt;">300. </span><span style="min-height: 12pt; font-size: 12pt;">Two such examples are given below:</span></p><p class="docx_listparagraph"></p><p class="docx_listparagraph docx-num-3-0"><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;">INDIA:</span><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><br></span></p><p style="margin-left: 18pt; text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 303.6pt; height: 262.85pt;"><img src="Picture4.png" style="position: relative; left: 0pt; top: 0pt; width: 305.58pt; height: 264.56pt;"></div></span><span><br></span><span style="font-weight: bold;">Figure 4</span><span><br></span><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 305.4pt; height: 275.33pt;"><img src="Picture5.png" style="position: relative; left: 0pt; top: 0pt; width: 308.67pt; height: 278.28pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 5</span></p><p style="margin-left: 18pt; text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 301.23pt; height: 286.2pt;"><img src="Picture6.png" style="position: relative; left: 0pt; top: 0pt; width: 302.69pt; height: 287.59pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 6</span></p><p class="docx_listparagraph docx-num-6-0"><span style="min-height: 12pt; font-size: 12pt;">Figures 4, 5 and 6</span><span style="min-height: 12pt; font-size: 12pt;"> show the original outline of the India map, the output of the decomposition algorothm and the output of the merging algorithm respectively.</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">The original </span><span style="min-height: 12pt; font-size: 12pt;">polygon consists of 136 vertices and 136 edges. </span></p><p class="docx_listparagraph docx-num-6-0"><span style="min-height: 12pt; font-size: 12pt;">After applying the decomposition algorithm, </span><span style="min-height: 12pt; font-size: 12pt;">the output graph consists of 210 edges. </span><span style="min-height: 12pt; font-size: 12pt;">Sfter optimizing the decomposition using </span><span style="min-height: 12pt; font-size: 12pt;">the merging algorithm, the graph consists of 202 edges with 8 inessential edges being discarded. </span></p><p class="docx_listparagraph docx-num-6-0"><span style="min-height: 12pt; font-size: 12pt;">The implementation of the algorithm on this polygon takes 0.015 seconds.</span></p><p><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p class="docx_listparagraph docx-num-3-0"><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;">FRANCE:</span></p><p style="text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 282pt; height: 219.02pt;"><img src="Picture7.png" style="position: relative; left: 0pt; top: 0pt; width: 284.75pt; height: 221.16pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure </span><span style="font-weight: bold;">7</span></p><p style="margin-left: 18pt; text-align: center;"><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 283.23pt; height: 238.2pt;"><img src="Picture8.png" style="position: relative; left: 0pt; top: 0pt; width: 283.63pt; height: 238.53pt;"></div></span><span><br></span><span style="font-weight: bold;">Figure 8</span><span><br></span></p><p style="margin-left: 18pt; text-align: center;"><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 277.8pt; height: 221.89pt;"><img src="Picture9.png" style="position: relative; left: 0pt; top: 0pt; width: 278.78pt; height: 222.68pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 9</span><span><br></span></p><p class="docx_listparagraph docx-num-8-0"><span style="min-height: 12pt; font-size: 12pt;">Figures 4, 5 and 6 show the original outline of the </span><span style="min-height: 12pt; font-size: 12pt;">France </span><span style="min-height: 12pt; font-size: 12pt;">map, the output of the decomposition algorothm and the output of the merging algorithm respectively. The original polygon consists of </span><span style="min-height: 12pt; font-size: 12pt;">48</span><span style="min-height: 12pt; font-size: 12pt;"> vertices and </span><span style="min-height: 12pt; font-size: 12pt;">48</span><span style="min-height: 12pt; font-size: 12pt;"> edges.</span></p><p class="docx_listparagraph docx-num-6-0"><span style="min-height: 12pt; font-size: 12pt;">After applying the decomposition algorithm, the output graph consists of </span><span style="min-height: 12pt; font-size: 12pt;">71</span><span style="min-height: 12pt; font-size: 12pt;"> edges. Sfter optimizing the decomposition using the merging algorithm, the graph consists of </span><span style="min-height: 12pt; font-size: 12pt;">68</span><span style="min-height: 12pt; font-size: 12pt;"> edges with </span><span style="min-height: 12pt; font-size: 12pt;">3</span><span style="min-height: 12pt; font-size: 12pt;"> inessential edges being discarded. </span></p><p class="docx_listparagraph docx-num-6-0"><span style="min-height: 12pt; font-size: 12pt;">The implementation of the algorithm on this polygon takes 0.0</span><span style="min-height: 12pt; font-size: 12pt;">09</span><span style="min-height: 12pt; font-size: 12pt;"> seconds.</span></p><p style="margin-left: 36pt;"></p><p class="docx_listparagraph docx-num-3-0"><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;">TIMING ANALYSIS GRAPH:</span><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><br></span></p><p class="docx_listparagraph docx-num-9-0"><span style="min-height: 12pt; font-size: 12pt;">Figure 10</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">shows the </span><span style="min-height: 12pt; font-size: 12pt;">timing analysis graph for the time taken by the algorithm to analyze the maps of the 180 countries considered. </span><span style="min-height: 12pt; font-size: 12pt;">The X-axis shows the number of vertices in the input polygon and the Y-axis depicts the analysis time taken by the algorithm in seconds for the input polygon.</span><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p style="text-align: center;"><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 447.64pt; height: 342.63pt;"><img src="Picture10.png" style="position: relative; left: 0pt; top: 0pt; width: 447.64pt; height: 342.63pt;"></div></span><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 10</span><span><br></span></p><p class="docx_listparagraph docx-num-7-0"><span style="min-height: 12pt; font-size: 12pt;">The mean number of</span><span style="min-height: 12pt; font-size: 12pt;"> vertices in the 180 countries is 47 and the algorithm takes 0.0069 seconds on an average to analyze the input polygons. </span></p><p></p><p class="docx_listparagraph docx-num-1-0"><span style="min-height: 12pt; font-size: 12pt;">We also performed the timing analysis of the algorithm on a range of input polygons starting from size of 5 vertices to the size of 10,000 vertices. </span><span style="min-height: 12pt; font-size: 12pt;">We plotted a timing diagram as shown in Figure 11</span><span style="min-height: 12pt; font-size: 12pt;">.</span><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p style="text-align: center;"><span style="min-height: 12pt; font-size: 12pt;"><div style="display: inline-block; position: relative; text-indent: 0px; width: 427.81pt; height: 321pt;"><img src="Picture11.png" style="position: relative; left: 0pt; top: 0pt; width: 427.95pt; height: 321.1pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 11</span><span><br></span></p><p class="docx_listparagraph docx-num-7-0"><span style="min-height: 12pt; font-size: 12pt;">The X-axis shows the number of vertices in the input polygon and the Y-axis depicts the analysis time taken by the algorithm in seconds for the input polygon.</span></p><p class="docx_listparagraph docx-num-7-0"><span style="min-height: 12pt; font-size: 12pt;">The graph </span><span style="min-height: 12pt; font-size: 12pt;">shows a gradual increase in the analysis time with respect to the number of vertices in the input polygon with the graph’s steepness slightly increasing with increase in vertices.</span></p><p></p><p class="docx_listparagraph docx-num-12-0"><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;">ALGORITHM </span><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;">IMPROVEMENT</span><span style="font-weight: bold; min-height: 15pt; font-size: 15pt;"><br></span><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><br></span></p><p><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;">Algorithm used in the paper:</span></p><p class="docx_listparagraph docx-num-10-0"><span style="min-height: 12pt; font-size: 12pt;">According to the research paper in the merge step, where we remove unnecessary diagonals created during split step, it suggests removing a </span><span style="min-height: 12pt; font-size: 12pt;">diagonal</span><span style="min-height: 12pt; font-size: 12pt;"> only if the vertices of the diagonal have at least 2 diagonals incident on them.</span></p><p><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;">Improved algorithm from our findings:</span></p><p class="docx_listparagraph docx-num-10-0"><span style="min-height: 12pt; font-size: 12pt;">We modified the algorithm slightly in such a way that we remove diagonals when the vertices of diagonal have at least one diagonal incident on them instead of 2 diagonals as suggested in the paper.</span></p><p class="docx_listparagraph docx-num-10-0"><span style="min-height: 12pt; font-size: 12pt;">We tested both the versions of the algorithm on some test cases and observed better results in our algorithm.</span><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p><span style="min-height: 12pt; font-size: 12pt;">Consider the polygon given in Figure 12</span><span style="min-height: 12pt; font-size: 12pt;">:</span></p><p style="text-align: center;"><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 334.53pt; height: 262.2pt;"><img src="Picture12.png" style="position: relative; left: 0pt; top: 0pt; width: 337.59pt; height: 264.6pt;"></div></span><span style="font-weight: bold; min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 12</span></p><p style="text-align: center;"><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 306pt; height: 229.08pt;"><img src="Picture13.png" style="position: relative; left: 0pt; top: 0pt; width: 308.65pt; height: 231.06pt;"></div></span><span style="font-weight: bold;"><br>Figure 13</span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span><div style="display: inline-block; position: relative; text-indent: 0px; width: 326.95pt; height: 240pt;"><img src="Picture14.png" style="position: relative; left: 0pt; top: 0pt; width: 332.09pt; height: 243.77pt;"></div></span><span style="min-height: 12pt; font-size: 12pt;"><br></span><span style="font-weight: bold;">Figure 14</span></p><p></p><p class="docx_listparagraph docx-num-11-0"><span style="min-height: 12pt; font-size: 12pt;">Fig</span><span style="min-height: 12pt; font-size: 12pt;">ure 13</span><span style="min-height: 12pt; font-size: 12pt;"> is the decomposition obtained using the algorithm in the paper</span><span style="min-height: 12pt; font-size: 12pt;">.</span></p><p class="docx_listparagraph docx-num-11-0"><span style="min-height: 12pt; font-size: 12pt;">Fig</span><span style="min-height: 12pt; font-size: 12pt;">ure</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">14</span><span style="min-height: 12pt; font-size: 12pt;"> is the decomposition obtained using the improved algorithm,</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">in which one</span><span style="min-height: 12pt; font-size: 12pt;"> </span><span style="min-height: 12pt; font-size: 12pt;">unnecessary </span><span style="min-height: 12pt; font-size: 12pt;">diagonal</span><span style="min-height: 12pt; font-size: 12pt;"> has been removed without introducing reflex angle.</span><span style="min-height: 12pt; font-size: 12pt;"><br></span></p><p><span style="min-height: 12pt; font-size: 12pt;">Similarly</span><span style="min-height: 12pt; font-size: 12pt;">,</span><span style="min-height: 12pt; font-size: 12pt;"> we have also obtained better results with larger test cases too. </span><span style="min-height: 12pt; font-size: 12pt;">So,</span><span style="min-height: 12pt; font-size: 12pt;"> we propose that our algorithm is better.</span></p></article></section></div>

@@ -1,0 +1,14 @@
+digraph "helper_structs.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="helper_structs.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This Header implements the different structs needed to implement DCEL."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="helper_functions.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$helper__functions_8h.html",tooltip="This Header implements the different helper functions needed to implement DCEL."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="dcel.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dcel_8h.html",tooltip="This Header implements the DCEL Data Structure."];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="This cpp imports all the other header files to implement the Algorithm."];
+}
